@@ -10,5 +10,5 @@ program
 
 function printHelp(){
   console.log('See --help on each command for usage examples for that command');
-  console.log('`man rado` for more info about this program');
+  console.log('`man netflix-search` for more info about this program');
 }

@@ -1,6 +1,7 @@
 
 var nc = require('ncurses');
-var ImageToAscii = require("image-to-ascii");
+
+
 var w = new nc.Window();
 
 exports.updateSearchText = updateSearchText;
