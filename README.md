@@ -8,4 +8,4 @@ To use type in netflix search. Then just type in the movie you want to check.
 You can navigate the screen using the arrow buttons.
 
 
-![alt tag](https://raw.github.com/farrelke/farrelke/netflix-search/master/screencast.gif)
+![alt tag](https://raw.githubusercontent.com/farrelke/netflix-search/master/screencast.gif)
