@@ -1,0 +1,22 @@
+{
+  "name": "netflix-search",
+  "version": "1.0.0",
+  "description": "Searchs for movies using canistream.it",
+  "preferGlobal": "true",
+  "bin": {
+    "netflix" : "./netflix.js"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "image-to-ascii": "^1.3.0",
+    "lodash": "^3.7.0",
+    "ncurses": "^0.4.1",
+    "restler": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
