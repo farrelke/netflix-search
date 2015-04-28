@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Searchs for movies using canistream.it",
   "preferGlobal": "true",
+  "scripts": {
+    "dox": "./scripts/build-man-pages.js"
+  },
+  "directories": {
+    "man": "man"
+  },
   "bin": {
     "netflix" : "./netflix.js"
   },
