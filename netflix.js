@@ -5,6 +5,7 @@ var program  = require('commander');
 program
   .usage('<command>')
   .command('search', 'search for a show by title or word')
+  .command('go', 'go directly to netflix')
   .on('--help', printHelp)
   .parse(process.argv);
 

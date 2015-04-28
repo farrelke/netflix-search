@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-var rest   = require('restler');
 var program  = require('commander');
 var  _ = require('lodash');
 var nc = require('ncurses');
 var exec = require('child_process').exec;
+
 var gui = require('./gui.js');
+var streamapi = require('./streamapi.js');
 
 
 program
@@ -85,8 +86,8 @@ gui.w.on('inputChar', function(letter,key_code, is_key) {
 var curResults = [];
 function fetchNewResult(searchString){
 	if(searchString.length > 2){
-		rest.get('http://www.canistream.it/services/search',{query: {movieName: searchString}})
-			.on('complete', function(result) {
+
+		streamapi.getMovies(searchString).then(function(result){
 				curResults = result;
 				gui.printResults(curResults, rowPos, SelectedLink(linkPos));
 		});
@@ -103,12 +104,7 @@ function getStreamlinks(){
 
 		movie.hasStreamLinks = true;
 
-		rest.get('http://www.canistream.it/services/query',
-			{query: { movieId: movie._id, 
-					  attributes: '1',
-                      mediaType: 'streaming'}})
-			.on('complete', function(result) {
-
+		streamapi.getMovieDetails( movie._id).then(function(result){
 				movie.streamSearchCompleted = true;
 
 				if(result.netflix_instant){
@@ -119,11 +115,11 @@ function getStreamlinks(){
 					movie.links.amazon_prime = result.amazon_prime_instant_video.direct_url;
 				}
 				gui.printResults(curResults, rowPos, SelectedLink(linkPos));
-
 		});
 	};
-	
 }
+
+
 
 function SelectedLink(linkPos){
 	var movie = curResults[rowPos - 1];
