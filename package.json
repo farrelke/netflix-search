@@ -4,29 +4,30 @@
   "description": "Searchs for movies using canistream.it",
   "preferGlobal": "true",
   "scripts": {
-    "dox": "./scripts/build-man-pages.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "directories": {
     "man": "man"
   },
   "bin": {
-    "netflix" : "./netflix.js"
+    "netflix": "./netflix.js"
   },
   "dependencies": {
     "commander": "^2.8.1",
+    "fs": "0.0.2",
     "image-to-ascii": "^1.3.0",
     "lodash": "^3.7.0",
     "ncurses": "^0.4.1",
     "restler": "^3.2.2"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/farrelke/netflix-search"
+    "type": "git",
+    "url": "https://github.com/farrelke/netflix-search"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "marked-man": "^0.1.4",
+    "path-extra": "^1.0.2"
   },
-  "author": "",
+  "author": "Kevin Farrell",
   "license": "MIT"
 }
