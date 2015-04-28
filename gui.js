@@ -87,19 +87,3 @@ function makeLink(movie,selectedLink, link){
 	}
 }
 
-
-/*
-				ImageToAscii({
-						path: "http:\/\/image.tmdb.org\/t\/p\/w342\/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
-						size: {height: 50, width:80},
-						colored: true,
-					}, function(err, converted) {
-						var x = w.curx;
-						var y = w.cury;
-						w.addstr(1 + i, 0, converted);
-						w.cursor(y, x);
-						w.refresh();
-				//    console.log(err || converted);
-				});
-*/
-
