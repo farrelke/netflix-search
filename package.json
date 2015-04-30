@@ -13,13 +13,17 @@
     "netflix": "./netflix.js"
   },
   "dependencies": {
+    "colors": "^1.1.0",
     "commander": "^2.8.1",
     "fs": "0.0.2",
+    "htm-to-json": "^0.1.4",
     "image-to-ascii": "^1.3.0",
     "lodash": "^3.7.0",
     "ncurses": "^0.4.1",
+    "q": "^1.3.0",
     "restler": "^3.2.2",
-    "restler-q": "^0.1.1"
+    "restler-q": "^0.1.1",
+    "yesno": "0.0.1"
   },
   "repository": {
     "type": "git",

@@ -37,6 +37,13 @@ supported links: imdb,rotten tomatoes, netflix, amazon prime.
 This will bring you directly to the netflix for the movie you want to watch if it's available.
 
 
+```sh
+ $ netflix random 
+```
+
+This will present you with a random movie from netflix.
+
+
 
 
 ## Example

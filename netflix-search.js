@@ -9,7 +9,6 @@ var streamapi = require('./streamapi.js');
 
 
 program
-  .usage('<string>')
   .description('Search for shows by title')
   .parse(process.argv);
 
