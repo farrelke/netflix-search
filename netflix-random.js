@@ -4,31 +4,55 @@ var exec = require('child_process').exec;
 var yesno = require('yesno');
 var program  = require('commander');
 var colors = require('colors');
+var _ = require('lodash');
+var ImageToAscii = require('image-to-ascii');
 
 program
-  .usage('<string>')
-  .description('Goes directly to netflix for first result')
+  .option('-r, --rating <rating>','lowest rating movie you want to see')
+  .option('-a, --actor <actor>','search by actor')
+  .option('-d, --director <director>','search by director') 
+  .option('-k, --keyword <keyword>','search by keyword') 
+  .description('finds a netflix movie randomly using Netflix Roulette')
   .parse(process.argv);
 
 
 console.log('powered by Netflix Roulette');
 
+var defaults = {
+	rating: 1.0,
+	actor: 'none',
+	director: 'none',
+	keyword: 'none'
+};
 
+var argv = _.defaults(
+  program,
+  defaults
+);
 
 
 
 function SearchRandomMovie(){
-	netflixApi.getRandomMovie().then(function(movie){
+	netflixApi.getRandomMovie(argv).then(function(movie){
 		printMovie(movie);
-		spinAgain(movie.direct_link);		
+		spinAgain(convertToNetflixPage(movie.direct_link));		
 	});
 }
 
 
+function convertToNetflixPage(link){
+	return link.replace("WiPlayer?movieid=", 'WiMovie/'); 
+}
+
 function printMovie(movie){
+
 	console.log("");
 	console.log(colors.blue.bold(movie.title));
+	// console.log(movie.cast);
+	console.log(colors.red('Netflix rating - ' + movie.rating));
+
 	console.log(colors.blue(movie.description));
+	console.log(colors.grey('staring ' + movie.cast));
 	console.log("");
 }
 
