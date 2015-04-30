@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var streamapi = require('./streamapi.js');
+var streamapi = require('./lib/streamapi.js');
 var exec = require('child_process').exec;
 var program  = require('commander');
 

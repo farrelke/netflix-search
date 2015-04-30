@@ -11,7 +11,6 @@ var streamapi = require('./streamapi.js');
 program
   .usage('<string>')
   .description('Search for shows by title')
- // .on('--help', printHelp)
   .parse(process.argv);
 
 
@@ -24,8 +23,6 @@ var linkPos = 0;
 
 
 gui.w.on('inputChar', function(letter,key_code, is_key) {
-	//console.log(key_code);
-
 
 	if(key_code === 10){
 		var movie = curResults[rowPos -1];
@@ -97,8 +94,6 @@ function fetchNewResult(searchString){
 
 function getStreamlinks(){
 	var movie = curResults[rowPos - 1];
-	//gui.close();
-	//			console.log(movie._id);
 
 	if(movie && !movie.hasStreamLinks){
 
