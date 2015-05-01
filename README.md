@@ -43,23 +43,15 @@ This will bring you directly to the netflix for the movie you want to watch if i
 
 This will present you with a random movie from netflix. You can make your random be filtered by the following options.
 
-#### Options
+##### Options
 
-```sh
- -r, --rating <rating>
-``` lowest rating movie you want to see.
+`-r, --rating <rating>` lowest rating movie you want to see.
 
-```sh
--a, --actor <actor>
-``` search by actor
+`-a, --actor <actor>` search by actor
 
-```sh
- -d, --director <director>
-``` search by director
+`-d, --director <director>` search by director
 
-```sh
--k, --keyword <keyword>
-``` search by keyword
+`-k, --keyword <keyword>` search by keyword
 
 
 
