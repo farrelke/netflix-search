@@ -1,5 +1,5 @@
 # netflix-search
-Simple shell tool to search for movies on the canistream.it api.
+Search,navigate, just randomly pick out a movie on netflix. Do it all from your trusty terminal. This small shell tool is powered using canistreamit.it, netflixroulette.net.
 
 
 ## Installation
@@ -26,34 +26,31 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 ```sh
  $ netflix search
 ```
+Now type in the movie you want to watch. You should be presented with a list of movie titles. Using your arror keys you will be able to naviagate the list and goto any link you have selected by just pressing enter.
 
-Now type in the movie you want to watch. You should be presented with a list of options, use the up and down arrow keys to navigate. Using the right arrow key you can then select any link you would like to view and then press enter. This will open the link in your default browser.
-
-supported links: imdb,rotten tomatoes, netflix, amazon prime.
+Currently supported links: imdb,rotten tomatoes, netflix, amazon prime.
 
 #### netflix go
 ```sh
  $ netflix go <movie titile>
 ```
 
-This will bring you directly to the netflix for the movie you want to watch if it's available.
+This will bring you directly to the movie in netflix if it is available.
 
 #### netflix random
 ```sh
  $ netflix random [options]
 ```
 
-This will present you with a random movie from netflix. You can make your random be filtered by the following options.
-
-##### Options
+This is basically a wrapper around netflixroulette.net where you get back a random movie. You can also filter what movie comes back on the following options:
 
 `-r, --rating <rating>` lowest rating movie you want to see.
 
-`-a, --actor <actor>` search by actor
+`-a, --actor <actor>` search by actor.
 
-`-d, --director <director>` search by director
+`-d, --director <director>` search by director.
 
-`-k, --keyword <keyword>` search by keyword
+`-k, --keyword <keyword>` search by keyword.
 
 
 
