@@ -2,10 +2,10 @@
 var program  = require('commander');
 var  _ = require('lodash');
 var nc = require('ncurses');
-var exec = require('child_process').exec;
 
-var gui = require('./gui.js');
-var streamapi = require('./streamapi.js');
+var utils = require('./lib/utils');
+var gui = require('./lib/gui.js');
+var streamapi = require('./lib/streamapi.js');
 
 
 program
@@ -27,7 +27,7 @@ gui.w.on('inputChar', function(letter,key_code, is_key) {
 		var movie = curResults[rowPos -1];
 		if(movie){
 			var link = SelectedLink(linkPos);
-			exec('open "' + movie.links[link] + '"');
+			utils.openLink(movie.links[link]);
 		}
 	}
 	else if(key_code === 261){

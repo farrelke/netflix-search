@@ -1,0 +1,62 @@
+.TH "NETFLIX\-SEARCH" "" "April 2015" "" ""
+.SH "NAME"
+\fBnetflix-search\fR
+.P
+Search,navigate, just randomly pick out a movie on netflix\. Do it all from your trusty terminal\. This small shell tool is powered using canistreamit\.it, netflixroulette\.net\.
+.SH Installation
+.P
+Download node at nodejs\.org \fIhttp://nodejs\.org\fR and install it, if you haven't already\. 
+.P
+.RS 2
+.nf
+ $ npm install \-g
+.fi
+.RE
+.SH Usage
+.P
+.RS 2
+.nf
+    $ netflix <command> [options]
+.fi
+.RE
+.SS Commands
+.SS netflix search
+.P
+.RS 2
+.nf
+ $ netflix search
+.fi
+.RE
+.P
+Now type in the movie you want to watch\. You should be presented with a list of movie titles\. Using your arror keys you will be able to naviagate the list and goto any link you have selected by just pressing enter\.
+.P
+Currently supported links: imdb,rotten tomatoes, netflix, amazon prime\.
+.SS netflix go
+.P
+.RS 2
+.nf
+ $ netflix go <movie titile>
+.fi
+.RE
+.P
+This will bring you directly to the movie in netflix if it is available\.
+.SS netflix random
+.P
+.RS 2
+.nf
+ $ netflix random [options]
+.fi
+.RE
+.P
+This is basically a wrapper around netflixroulette\.net where you get back a random movie\. You can also filter what movie comes back on the following options:
+.P
+\fB\-r, \-\-rating <rating>\fR lowest rating movie you want to see\.
+.P
+\fB\-a, \-\-actor <actor>\fR search by actor\.
+.P
+\fB\-d, \-\-director <director>\fR search by director\.
+.P
+\fB\-k, \-\-keyword <keyword>\fR search by keyword\.
+.SH Example
+.P
+alt tag \fIhttps://raw\.githubusercontent\.com/farrelke/netflix\-search/master/screencast\.gif\fR

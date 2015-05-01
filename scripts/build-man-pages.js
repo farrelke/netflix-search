@@ -22,3 +22,4 @@ function createManfile(mdpath, commandName){
   var md = fs.readFileSync(mdpath,'utf8');
   fs.writeFileSync(manfilePath,markedman(md));
 }
+

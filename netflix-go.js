@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var streamapi = require('./lib/streamapi.js');
-var exec = require('child_process').exec;
+var utils = require('./lib/utils');
 var program  = require('commander');
 
 program
@@ -11,23 +11,31 @@ program
  var searchTerm = program.args[0];
 
 
-
-var title = "";
+if(!program.args[0]){
+	console.log("Please enter a movie title");
+}
 
 streamapi.getMovies(searchTerm) 
 	.then(function(movies){
+
 		if(movies.length > 0){
-			title = movies[0].title;
-			return streamapi.getMovieDetails( movies[0]._id);
+
+			var title = movies[0].title;
+			var movieInfoPromise = streamapi.getMovieDetails( movies[0]._id);
+			return [ title , movieInfoPromise];
+
 		}else{
 			console.log("Could not find a movie with that title");
 		}
-	}).then(function(movie){
+
+	}).spread(function(title, movie){
+
 		if(movie.netflix_instant){
-			exec('open "' + movie.netflix_instant.direct_url + '"');
+			utils.openLink(movie.netflix_instant.direct_url);
 		}else{
 			console.log( title + " doesn't appear to be on netflix");
 		}
+
 	}).catch(function(err){
 		console.log(err);
 	});
