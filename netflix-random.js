@@ -48,9 +48,7 @@ function printMovie(movie){
 
 	console.log("");
 	console.log(colors.blue.bold(movie.title));
-	// console.log(movie.cast);
 	console.log(colors.red('Netflix rating - ' + movie.rating));
-
 	console.log(colors.blue(movie.description));
 	console.log(colors.grey('staring ' + movie.cast));
 	console.log("");
