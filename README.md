@@ -22,7 +22,7 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 ### Commands
 
 
-#### search
+#### netflix search
 ```sh
  $ netflix search
 ```
@@ -31,14 +31,14 @@ Now type in the movie you want to watch. You should be presented with a list of 
 
 supported links: imdb,rotten tomatoes, netflix, amazon prime.
 
-#### go
+#### netflix go
 ```sh
  $ netflix go <movie titile>
 ```
 
 This will bring you directly to the netflix for the movie you want to watch if it's available.
 
-#### random
+#### netflix random
 ```sh
  $ netflix random [options]
 ```
