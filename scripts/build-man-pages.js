@@ -11,7 +11,7 @@ var manpath  = path.resolve(__dirname,'../man');
 
 //special case: readme.md is not in doc/
 var readmePath = path.resolve(__dirname,'..','readme.md');
-createManfile(readmePath, 'netflix-search');
+createManfile(readmePath, 'netflix');
 
 function isMarkdown(filename){
   return path.extname(filename) === '.md';
