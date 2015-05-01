@@ -47,23 +47,19 @@ This will present you with a random movie from netflix. You can make your random
 
 ```sh
  -r, --rating <rating>
-```
-lowest rating movie you want to see.
+```lowest rating movie you want to see.
 
 ```sh
 -a, --actor <actor>
-```
-search by actor
+```search by actor
 
 ```sh
  -d, --director <director>
-```
-search by director
+```search by director
 
 ```sh
 -k, --keyword <keyword>
-```
-search by keyword
+```search by keyword
 
 
 
